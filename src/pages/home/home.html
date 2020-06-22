@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title> Berita Terkini</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let article of articles">
+    <img src="{{article.urlToImage}}"/>
+    <ion-card-header>
+      {{article.publishedAt | date}}<br>
+      {{article.source.name}} <br>
+     {{article.title}}
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        {{article.description}}
+      </p>
+      <a fill="outline" href="{{article.url}}" large>Baca atrikel</a>
+
+    </ion-card-content>
+  </ion-card>
+<!-- Created By Muhammad Akmal -->
+</ion-content>
